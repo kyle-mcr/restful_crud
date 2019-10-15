@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> Add New Task </title>
+</head>
+<style>
+    .form-group{
+        width: 80%;
+        margin-left:5%;
+    }
+    .button{
+        background-color: greenyellow;
+        padding:3px 15px;
+        border: 1px black solid;
+        border-radius: 10px;
+        box-shadow: 0 8px 6px -6px black;
+        margin-top:5px;
+    }
+</style>
+
+<body>
+
+    <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Title</label>
+        <input type="text" class="form-control" id="formGroupExampleInput"  name="myobj.title" [(ngModel)]="myobj.title" placeholder="Title">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Decription</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" name="myobj.description" [(ngModel)]="myobj.description" placeholder="Description">
+      </div>
+      <div class="form-group">
+            <label for="formGroupExampleInput2">Completed</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" name="myobj.completed" [(ngModel)]="myobj.completed" placeholder="Completed">
+            <button class="button" (click)="submitForm()">Submit</button>
+            <a class="button" [routerLink]="['/']">Go Back</a>
+            </div>
+    </form>
+
+</body>
+
+</html>
